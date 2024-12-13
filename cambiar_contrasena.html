@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Contraseña</title>
+    <link rel="stylesheet" href="facebuuk.css"> <!-- Reutiliza el archivo CSS -->
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Cambiar Contraseña</h1>
+            <p>Ingresa tu nueva contraseña para tu cuenta.</p>
+        </header>
+
+        <form class="change-password-form">
+            <input type="password" placeholder="Nueva Contraseña" name="new-password" required>
+            <input type="password" placeholder="Confirma Nueva Contraseña" name="confirm-password" required>
+            <button type="submit">Actualizar Contraseña</button>
+        </form>
+    </div>
+
+    <script>
+        // Manejo del formulario para cambiar la contraseña
+        document.querySelector('.change-password-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evita que la página se recargue
+
+            const newPassword = event.target['new-password'].value.trim();
+            const confirmPassword = event.target['confirm-password'].value.trim();
+
+            if (!newPassword || !confirmPassword) {
+                alert('Por favor, completa ambos campos.');
+            } else if (newPassword !== confirmPassword) {
+                alert('Las contraseñas no coinciden. Intenta de nuevo.');
+            } else {
+                alert('Tu contraseña ha sido actualizada exitosamente.');
+                window.location.href = "facebuuk.html"; // Redirige al inicio de sesión
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="facebuuk.css"> <!-- Reutilizamos los estilos -->
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Bienvenido a Facebuck</h1>
+            <p>¡Ups! Parece que tu cuenta ha sido comprometida.</p>
+        </header>
+        
+        <!-- Simulación del perfil de usuario -->
+        <div class="profile-container">
+            <h2>Hola, <span id="username-placeholder">[Nombre del usuario]</span></h2>
+            <p>Esta es una simulación para mostrar cómo un sitio no seguro puede comprometer tu cuenta.</p>
+            <p><strong>Consejo:</strong> Nunca uses la misma contraseña para múltiples sitios web.</p>
+        </div>
+        
+        <!-- Mensaje de advertencia -->
+        <div class="alert">
+            <p style="color: red; font-weight: bold;">Tu cuenta ha sido hackeada. Cambia tu contraseña inmediatamente.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Recuperar el nombre de usuario almacenado y mostrarlo
+        const username = localStorage.getItem('username') || 'Usuario';
+        document.getElementById('username-placeholder').textContent = username;
+    </script>
+</body>
+</html>
+
+
