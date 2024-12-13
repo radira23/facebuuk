@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replica de Facebook</title>
+    <link rel="stylesheet" href="facebuuk.css"> <!-- Archivo CSS -->
+</head>
+<body>
+    <!-- Contenedor Principal -->
+    <div class="container">
+        <!-- Encabezado (Logo y nombre de la página) -->
+        <header class="header">
+            <h1> Facebuck</h1>
+            <p>Conéctate con tus amigos y el mundo que te rodea.</p>
+        </header>
+        
+        <!-- Formulario de Inicio de Sesión -->
+        <div class="login-container">
+            <form class="login-form" action="#" method="post">
+                <input type="text" placeholder="Correo electrónico o número de teléfono" name="username" required>
+                <input type="password" placeholder="Contraseña" name="password" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <a href="http://phishing-site.example.com" target="_blank" class="forgot-password">
+                ¿Olvidaste tu contraseña?
+            </a>
+            
+            <hr>
+            <!-- Botón para redirigir al formulario de registro -->
+            <a href="registro_facebuuk.html" class="create-account">Crear cuenta nueva</a>
+        </div>
+    </div>
+    <div class="alert">
+        <p>¡Tu cuenta está en riesgo! Inicia sesión inmediatamente para evitar el bloqueo!</p>
+    </div>
+    
+    <script src="facebuuk.js"></script>
+</body>
+</html>
+
+
